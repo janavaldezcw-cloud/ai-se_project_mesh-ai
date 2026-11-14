@@ -3,6 +3,6 @@ import type { Request, Response, NextFunction  } from 'express'
 
 
 export const logger = (req : Request, res: Response, next: NextFunction) => {
-    console.log(`${req}`)
+    console.log(`${req.method} ${req.originalUrl}`)
     next()
 };  
